@@ -37,9 +37,10 @@ El tablero de Tableau incluye:
 
 ## **Cómo Ejecutar el Proyecto**
 1. Descarga los archivos del repositorio.
-2. Abre el archivo `metadata.xlsx` en Tableau.
+2. Abre el archivo `metadata.xlsx` en Tableau (ya esta acondicionado para usarse).
 3. Importa el archivo de códigos de países (`codigo_paises_completo.csv`) como fuente secundaria.
-4. Diseña o adapta las visualizaciones según tus necesidades.
+4. Vincula los archivos mediante una relacion de uno a muchos teniendo en cuenta en el metadata la columna "Pais de origen" y en el archivo codigos_paises_completo la columna "Código ISO"
+6. Diseña o adapta las visualizaciones según tus necesidades.
 
 ## **Contribuciones**
 ¡Las contribuciones son bienvenidas! Si encuentras un problema o tienes una sugerencia para mejorar el proyecto, usa los medios disponibles para hacermelo saber.
