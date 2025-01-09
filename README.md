@@ -3,13 +3,14 @@
 Este proyecto utiliza un dataset de metadatos de contenidos (películas, series, documentales, entre otros) para construir un tablero de visualización en Tableau. La información está enriquecida con datos adicionales como códigos de países, permitiendo un análisis detallado y visual de la oferta de contenidos de una plataforma.
 
 ## **Dataset**
-El dataset principal utilizado en este proyecto contiene información sobre:
+El dataset principal utilizado en este proyecto es uno de los archivos csv convertido a formato excel, extraido de un challenge propuesto por Telecom para realizar un sistema de recomendación de contenido para cada ususario de la plataforma. 
+Este dataset contiene información sobre:
 - **Identificadores**: `asset_id`, `content_id`.
 - **Detalles del contenido**: título, tipo (película, serie, documental), año de lanzamiento, categoría, palabras clave, duración, descripción, audiencia objetivo.
 - **Información temporal**: fechas de incorporación y vigencia (`start_vod_date`, `end_vod_date`).
 - **Ubicación geográfica**: países en los que el contenido está disponible.
 
-El dataset fue obtenido y preprocesado para optimizar su uso en Tableau.
+El dataset fue preprocesado para optimizar su uso en Tableau, ya que la herramienta en version Public tiene limitaciones para preprocesar los datos y acondicionarlos para tener mejores visualizaciones.
 
 ## **Acondicionamiento en Google Colab**
 El procesamiento de los datos se realizó en Google Colab y consistió en los siguientes pasos:
@@ -18,6 +19,7 @@ El procesamiento de los datos se realizó en Google Colab y consistió en los si
    - Conversión de formatos de fechas para facilitar su análisis temporal.
 2. **Enriquecimiento del Dataset**:
    - Agregación de un archivo complementario con códigos de países para visualizar la disponibilidad de los contenidos en el mapa.
+   - Se agrega una  columna con los nombres de contenido base (Base_Title) limpios para no contar de manera separada contenidos que pertenecen a un mismo grupo.
 3. **Exportación**:
    - El dataset procesado fue exportado en formato `.xlsx`, listo para ser integrado en Tableau.
 
@@ -34,6 +36,8 @@ El tablero de Tableau incluye:
 - Análisis temporal de la incorporación de contenidos.
 - Distribución geográfica de la disponibilidad de los contenidos.
 - Clasificación por audiencia, categorías y otros criterios.
+- Información relevante de cada contenido
+- Busqueda en la web
 
 ## **Cómo Ejecutar el Proyecto**
 1. Descarga los archivos del repositorio.
@@ -41,6 +45,7 @@ El tablero de Tableau incluye:
 3. Importa el archivo de códigos de países (`codigo_paises_completo.csv`) como fuente secundaria.
 4. Vincula los archivos mediante una relacion de uno a muchos teniendo en cuenta en el metadata la columna "Pais de origen" y en el archivo codigos_paises_completo la columna "Código ISO"
 6. Diseña o adapta las visualizaciones según tus necesidades.
+7. Puedes descargar y usar el tablero realizado para este analisis en el siguiente link: [Metadata TV](https://public.tableau.com/views/EntregaFinal-CarchanoVargas/Menuprincipal?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ## **Contribuciones**
 ¡Las contribuciones son bienvenidas! Si encuentras un problema o tienes una sugerencia para mejorar el proyecto, usa los medios disponibles para hacermelo saber.
