@@ -19,7 +19,7 @@ El procesamiento de los datos se realizó en Google Colab y consistió en los si
    - Conversión de formatos de fechas para facilitar su análisis temporal.
 2. **Enriquecimiento del Dataset**:
    - Agregación de un archivo complementario con códigos de países para visualizar la disponibilidad de los contenidos en el mapa.
-   - Se agrega una  columna con los nombres de contenido base (Base_Title) limpios para no contar de manera separada contenidos que pertenecen a un mismo grupo.
+   - Se agrega una columna con los nombres de contenido base (Base_Title) limpios para no contar de manera separada contenidos que pertenecen a un mismo grupo.
 3. **Exportación**:
    - El dataset procesado fue exportado en formato `.xlsx`, listo para ser integrado en Tableau.
 
@@ -43,7 +43,7 @@ El tablero de Tableau incluye:
 1. Descarga los archivos del repositorio.
 2. Abre el archivo `metadata.xlsx` en Tableau (ya esta acondicionado para usarse).
 3. Importa el archivo de códigos de países (`codigo_paises_completo.csv`) como fuente secundaria.
-4. Vincula los archivos mediante una relacion de uno a muchos teniendo en cuenta en el metadata la columna "Pais de origen" y en el archivo codigos_paises_completo la columna "Código ISO"
+4. Vincula los archivos mediante una relacion de muchos a uno teniendo en cuenta en el archivo metadata la columna "Pais de origen" (muchos) y en el archivo codigos_paises_completo la columna "Código ISO" (uno)
 6. Diseña o adapta las visualizaciones según tus necesidades.
 7. Puedes descargar y usar el tablero realizado para este analisis en el siguiente link: [Metadata TV](https://public.tableau.com/views/EntregaFinal-CarchanoVargas/Menuprincipal?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
